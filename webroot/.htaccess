@@ -1,0 +1,6 @@
+RewriteEngine On
+#condition de réécriture Sauf si fichier existe -d
+RewriteCond %{REQUEST_FILENAME} !-d
+#condition de réécriture n'existe pas -f
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*) index.php/$1 [L]
